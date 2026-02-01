@@ -42,7 +42,7 @@ export default function ProblemsPage() {
 
   // Fetch problems from backend
   useEffect(() => {
-    fetch("http://localhost:5050/api/problems")
+    fetch("https://sleuthdigits.onrender.com/api/problems")
       .then((res) => res.json())
       .then((data) => {
         setProblemsData(data);
@@ -149,7 +149,7 @@ export default function ProblemsPage() {
       <div className="problem-card">
         <div className="image-wrap">
           <img
-            src={`http://localhost:5050${currentProblem.image}`}
+            src={`https://sleuthdigits.onrender.com${currentProblem.image}`}
             alt={`case-${currentProblem.id}`}
             className="case-image"
           />
